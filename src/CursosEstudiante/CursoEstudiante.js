@@ -7,7 +7,7 @@ const CursoEstudiante = ({ cursos = [] }) => {
     <div>
       {cursos.map((item) => (
         <div
-          className="p-2 text-white overflow border-top border-start border-end border-bottom border-white"
+          className="p-1 text-white border-top border-start border-end border-bottom border-white"
           id="cursos"
         >
           <a href="#">
@@ -15,7 +15,7 @@ const CursoEstudiante = ({ cursos = [] }) => {
               src={item.ubicacion_img}
               alt=""
               width="200px"
-              height="120px"
+              height="150px"
               className=" alin border-top border-start border-end border-bottom border-white"
             />
           </a>
@@ -34,18 +34,17 @@ const CursoEstudiante = ({ cursos = [] }) => {
             </p>
             <p id="Descripcion" className="card-text">
               {item.descripcion}
-              <br />
             </p>
           </div>
-          <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+          <div class="d-grid justify-content-md-end">
           <button 
           type="button" 
           onClick={() => setCurso(item)} 
           data-bs-toggle="modal"  
           data-bs-target="#staticBackdrop" 
-          className="btn btn-outline-success">
+          className="btnnn btn-outline-warning">
             Inscribirse
-            </button>
+            </button><br/>
           </div>
         </div>
       ))}
