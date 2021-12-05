@@ -119,13 +119,7 @@ function Lista() {
         instruc = ins;
       }
     });
-    const cursos_orden=instruc.cursos.sort(function (x, y){
-      if (x.nombre < y.nombre) {return -1;}
-      if (x.nombre > y.nombre) {return 1;}
-      return 0;
-    })
-    //console.log(cursos_orden);
-    return cursos_orden;
+    return instruc;
   };
 
   const getCookies = (cname) => {
@@ -157,7 +151,7 @@ function Lista() {
       <div className="list-group">
         <div className="col-md-6 col align-self-center">
           <div className="container">
-            <h3 className="text-white">Mis cursosss</h3>
+            <h3 className="text-white">Mis cursos</h3>
             <table className="table text-white">
               <thead>
                 <tr>
@@ -173,7 +167,7 @@ function Lista() {
               </thead>
               <tbody>
                 {instructor.length > 0 &&
-                  getInstructorByid()?.map((element) => {
+                  getInstructorByid().cursos?.map((element) => {
                     return (
                       <tr>
                         <td className="text-white ">{element.nombre}</td>
@@ -253,7 +247,7 @@ function Lista() {
               >
                 <Label for="detalle">Descripcion</Label>
                 <Input
-                  maxLength="700"
+                  maxLength="300"
                   required
                   type="textarea"
                   id="detalle"
@@ -261,7 +255,7 @@ function Lista() {
                   value={cursoSeleccionado && cursoSeleccionado.descripcion}
                   onChange={handleChange}
                 />
-                <p className="caracteres">Caract. Max. 700</p>
+                <p className="caracteres">Caract. Max. 300</p>
               </FormGroup>
               <FormGroup
                 id="contenedor-descripcion"
