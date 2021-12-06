@@ -123,7 +123,7 @@ function Lista() {
         instruc = ins;
       }
     });
-    const cursos_orden = instruc.cursos.sort(function (x, y) {
+    /*const cursos_orden = instruc.cursos.sort(function (x, y) {
       if (x.nombre < y.nombre) {
         return -1;
       }
@@ -133,7 +133,8 @@ function Lista() {
       return 0;
     });
     //console.log(cursos_orden);
-    return cursos_orden;
+    return cursos_orden;*/
+    return instruc.cursos;
   };
 
   const getCookies = (cname) => {
