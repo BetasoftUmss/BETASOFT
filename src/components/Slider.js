@@ -9,7 +9,7 @@ const Slider = () => {
   const [curso, setCurso] = useState({});
 
   useEffect(() => {
-    fetch("https://betaweb-back.herokuapp.com/api/ContarInscritos").then(
+    fetch("https://app-betaweb.herokuapp.com/api/ContarInscritos").then(
       async (response) => {
         if (response.ok) setCursos(await response.json());
       }

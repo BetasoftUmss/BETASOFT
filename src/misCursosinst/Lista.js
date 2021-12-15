@@ -25,7 +25,7 @@ const cesto = (
   <img src={cestoBasura} className="cesto-1" width="25" height="25" />
 );
 const lapicito = <img src={lapiz} className="cesto-1" width="25" height="25" />;
-const baseUrl = "https://betaweb-back.herokuapp.com/api/curso/";
+const baseUrl = "https://app-betaweb.herokuapp.com/api/curso/";
 
 function Lista() {
   const [instructor, setInstructor] = useState([]);
@@ -94,7 +94,7 @@ function Lista() {
   ///////////////////////////////////
   useEffect(() => {
     axios
-      .get("https://betaweb-back.herokuapp.com/api/curso")
+      .get("https://app-betaweb.herokuapp.com/api/curso")
       .then((response) => {
         setCursos(response.data);
       })
@@ -104,7 +104,7 @@ function Lista() {
   }, []);
   useEffect(() => {
     axios
-      .get("https://betaweb-back.herokuapp.com/api/instructor")
+      .get("https://app-betaweb.herokuapp.com/api/instructor")
       .then((response) => {
         setInstructor(response.data);
       })

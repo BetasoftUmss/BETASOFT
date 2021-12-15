@@ -3,7 +3,7 @@ import "./Vista.css";
 import axios from "axios";
 import MisVideo from "./MisVideo";
 
-const baseUrl = "https://betaweb-back.herokuapp.com/api/inscritos/";
+const baseUrl = "https://app-betaweb.herokuapp.com/api/inscritos/";
 
 function ListaEstudiante() {
   const [cursos, setCursos] = useState([]);
@@ -14,7 +14,7 @@ function ListaEstudiante() {
   useEffect(() => {
     if (cursos.length === 0) {
       axios
-        .get("https://betaweb-back.herokuapp.com/api/inscritos")
+        .get("https://app-betaweb.herokuapp.com/api/inscritos")
         .then((response) => {
           inscritos = response.data;
           setCursos(

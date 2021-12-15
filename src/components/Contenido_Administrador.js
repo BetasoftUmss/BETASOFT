@@ -23,7 +23,7 @@ import axios from "axios";
 );*/
 
 //console.log(cookieIdInstructor);
-const baseUrl3 = "https://betaweb-back.herokuapp.com/api/usuario";
+const baseUrl3 = "https://app-betaweb.herokuapp.com/api/usuario";
 
 class Contenido_Administrador extends Component {
   state = {

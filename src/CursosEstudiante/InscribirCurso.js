@@ -18,7 +18,7 @@ function InscribirCurso(props) {
     };
     window.location.href = window.location.href;
     const res = await axios
-      .post("https://betaweb-back.herokuapp.com/api/inscribirse", dataPost)
+      .post("https://app-betaweb.herokuapp.com/api/inscribirse", dataPost)
       .then((response) => {
         const dataPost = { success: true, message: response.data };
         return dataPost;
@@ -44,23 +44,23 @@ function InscribirCurso(props) {
         <div className="modal-content color">
           <br />
           <div className="row">
-          <div className="">
-            <h3 className="text-white centro" id="staticBackdropLabel">
-              Inscribirse a este curso
-            </h3>
+            <div className="">
+              <h3 className="text-white centro" id="staticBackdropLabel">
+                Inscribirse a este curso
+              </h3>
             </div>
           </div>
           <br />
           <div className="row">
-          <div className="centro ">
-            <img
-              src={props.curso?.ubicacion_img || ""}
-              alt=""
-              width="70%"
-              height="90%"
-              className=" alin border-top border-start border-end border-bottom border-white"
-            />
-          </div>
+            <div className="centro ">
+              <img
+                src={props.curso?.ubicacion_img || ""}
+                alt=""
+                width="70%"
+                height="90%"
+                className=" alin border-top border-start border-end border-bottom border-white"
+              />
+            </div>
           </div>
           <br />
           <div className="row centro ">
@@ -74,8 +74,10 @@ function InscribirCurso(props) {
                 Cancelar
               </button>
             </div>
-           <div className="col-md-1 ms-auto "><br/></div>
-           
+            <div className="col-md-1 ms-auto ">
+              <br />
+            </div>
+
             <div className="col-md-6 ms-auto">
               <button
                 type="button"

@@ -2,14 +2,14 @@ import React, { useEffect, useState } from "react";
 import "./VistaAdministrador.css";
 import axios from "axios";
 
-const baseUrl = "https://betaweb-back.herokuapp.com/api/instructorList/";
+const baseUrl = "https://app-betaweb.herokuapp.com/api/instructorList/";
 
 function ListaDocentes() {
   const [lista, setLista] = useState([]);
 
   useEffect(() => {
     axios
-      .get("https://betaweb-back.herokuapp.com/api/instructorList")
+      .get("https://app-betaweb.herokuapp.com/api/instructorList")
       .then((response) => {
         setLista(response.data);
       })

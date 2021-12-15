@@ -12,7 +12,7 @@ const CursoEstudiante = ({ cursos = [] }) => {
   useEffect(() => {
     if (miscursos.length === 0) {
       axios
-        .get("https://betaweb-back.herokuapp.com/api/inscritos")
+        .get("https://app-betaweb.herokuapp.com/api/inscritos")
         .then((response) => {
           setMiscursos(
             response.data.map((element) => {

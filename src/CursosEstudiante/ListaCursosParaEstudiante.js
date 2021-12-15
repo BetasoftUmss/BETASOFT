@@ -8,14 +8,14 @@ function ListaCursosParaEstudiantes() {
   const [cursos, setCursos] = useState([]);
 
   const fetchCursos = () => {
-    fetch("https://betaweb-back.herokuapp.com/api/curso")
+    fetch("https://app-betaweb.herokuapp.com/api/curso")
       .then((response) => response.json())
       .then((data) => setCursos(data))
       .catch((error) => console.log(error));
   };
 
   useEffect(() => {
-    fetchCursos("https://betaweb-back.herokuapp.com/api/curso");
+    fetchCursos("https://app-betaweb.herokuapp.com/api/curso");
   }, []);
 
   const [tabla, setTablaCursos] = useState([]);
@@ -23,7 +23,7 @@ function ListaCursosParaEstudiantes() {
 
   const peticionGet = async () => {
     await axios
-      .get("https://betaweb-back.herokuapp.com/api/curso")
+      .get("https://app-betaweb.herokuapp.com/api/curso")
       .then((response) => {
         setTablaCursos(response.data);
         setCursos(response.data);
